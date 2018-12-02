@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CARSDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Cars">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="CarName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CarModel" Type="nvarchar" MaxLength="50" />
+          <Property Name="RegisterId" Type="nvarchar" MaxLength="50" />
+          <Property Name="Reputition" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChargePercent" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Lat" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Long" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TargetLat" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TargetLong" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="IsReserved" Type="char" MaxLength="1" />
+          <Property Name="IsPaired" Type="char" MaxLength="1" />
+          <Property Name="PairedCarId" Type="int" />
+        </EntityType>
+        <EntityContainer Name="CARSDBModelStoreContainer">
+          <EntitySet Name="Cars" EntityType="Self.Cars" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CARSDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="CARSDBEntities1" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="Cars" EntityType="CARSDBModel.Cars" />
+        </EntityContainer>
+        <EntityType Name="Cars">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="CarName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CarModel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RegisterId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Reputition" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChargePercent" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Lat" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Long" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TargetLat" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TargetLong" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="IsReserved" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="IsPaired" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PairedCarId" Type="Int32" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CARSDBModelStoreContainer" CdmEntityContainer="CARSDBEntities1" >
+          <EntitySetMapping Name="Cars">
+            <EntityTypeMapping TypeName="CARSDBModel.Cars">
+              <MappingFragment StoreEntitySet="Cars">
+                <ScalarProperty Name="PairedCarId" ColumnName="PairedCarId" />
+                <ScalarProperty Name="IsPaired" ColumnName="IsPaired" />
+                <ScalarProperty Name="IsReserved" ColumnName="IsReserved" />
+                <ScalarProperty Name="TargetLong" ColumnName="TargetLong" />
+                <ScalarProperty Name="TargetLat" ColumnName="TargetLat" />
+                <ScalarProperty Name="Long" ColumnName="Long" />
+                <ScalarProperty Name="Lat" ColumnName="Lat" />
+                <ScalarProperty Name="ChargePercent" ColumnName="ChargePercent" />
+                <ScalarProperty Name="Reputition" ColumnName="Reputition" />
+                <ScalarProperty Name="RegisterId" ColumnName="RegisterId" />
+                <ScalarProperty Name="CarModel" ColumnName="CarModel" />
+                <ScalarProperty Name="CarName" ColumnName="CarName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
