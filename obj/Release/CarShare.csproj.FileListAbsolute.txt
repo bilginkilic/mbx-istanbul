@@ -10,3 +10,17 @@ C:\Project\CarShare\CarShare\obj\Release\CarShare.csproj.CoreCompileInputs.cache
 C:\Project\CarShare\CarShare\obj\Release\CarShare.csproj.CopyComplete
 C:\Project\CarShare\CarShare\obj\Release\CarShare.dll
 C:\Project\CarShare\CarShare\obj\Release\CarShare.pdb
+E:\Hack\CarShare\CarShare\bin\CarShare.dll.config
+E:\Hack\CarShare\CarShare\bin\CarShare.dll
+E:\Hack\CarShare\CarShare\bin\CarShare.pdb
+E:\Hack\CarShare\CarShare\bin\EntityFramework.dll
+E:\Hack\CarShare\CarShare\bin\EntityFramework.SqlServer.dll
+E:\Hack\CarShare\CarShare\bin\RestSharp.dll
+E:\Hack\CarShare\CarShare\bin\EntityFramework.xml
+E:\Hack\CarShare\CarShare\bin\EntityFramework.SqlServer.xml
+E:\Hack\CarShare\CarShare\bin\RestSharp.xml
+E:\Hack\CarShare\CarShare\obj\Release\CarShare.csprojAssemblyReference.cache
+E:\Hack\CarShare\CarShare\obj\Release\CarShare.csproj.CoreCompileInputs.cache
+E:\Hack\CarShare\CarShare\obj\Release\CarShare.csproj.CopyComplete
+E:\Hack\CarShare\CarShare\obj\Release\CarShare.dll
+E:\Hack\CarShare\CarShare\obj\Release\CarShare.pdb

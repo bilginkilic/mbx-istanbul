@@ -19,11 +19,11 @@ namespace CarShare
         public string CarModel { get; set; }
         public string RegisterId { get; set; }
         public string Reputition { get; set; }
-        public decimal? ChargePercent { get; set; }
-        public decimal? Lat { get; set; }
-        public decimal? Long { get; set; }
-        public decimal? TargetLat { get; set; }
-        public decimal? TargetLong { get; set; }
+        public Nullable<decimal> ChargePercent { get; set; }
+        public Nullable<decimal> Lat { get; set; }
+        public Nullable<decimal> Long { get; set; }
+        public Nullable<decimal> TargetLat { get; set; }
+        public Nullable<decimal> TargetLong { get; set; }
         public string IsReserved { get; set; }
         public string IsPaired { get; set; }
         public Nullable<int> PairedCarId { get; set; }

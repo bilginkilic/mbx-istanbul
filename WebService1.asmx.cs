@@ -1,8 +1,12 @@
-﻿using System;
+﻿using ChargeMate.Models;
+using RestSharp;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using System.Web.Script.Serialization;
+using System.Web.Script.Services;
 using System.Web.Services;
 
 namespace CarShare
@@ -75,6 +79,42 @@ namespace CarShare
             carTarget.IsPaired = status;
             myCar.SaveChanges();
             ///Set
+        }
+
+        [WebMethod]
+        public string getLocationCar1()
+        {
+            var client = new RestClient("https://api.mercedes-benz.com/experimental/connectedvehicle/v1/vehicles/9624762FE4E4E9170F/location");
+            var restRequest = new RestRequest(Method.GET);
+            restRequest.AddHeader("cache-control", "no-cache");
+            restRequest.AddHeader("Content-Type", "application/x-www-form-urlencoded");
+            restRequest.AddHeader("authorization", "Bearer 3dd89de9-d7f7-4405-81f2-c261ecb5edb8");
+            restRequest.AddHeader("accept", "application/json");
+            restRequest.AddParameter("undefined", "undefined=", ParameterType.RequestBody);
+            IRestResponse restResponse = client.Execute(restRequest);
+
+            MercedesAPI apiResult = new JavaScriptSerializer().Deserialize<MercedesAPI>(restResponse.Content);
+
+
+            return apiResult.longitude.value.ToString();
+        }
+
+        [WebMethod]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+        public string getBatteryCharge()
+        {
+            var client = new RestClient("https://api.mercedes-benz.com/experimental/connectedvehicle/v1/vehicles/9624762FE4E4E9170F/stateofcharge");
+            var restRequest = new RestRequest(Method.GET);
+            restRequest.AddHeader("cache-control", "no-cache");
+            restRequest.AddHeader("Content-Type", "application/x-www-form-urlencoded");
+            restRequest.AddHeader("authorization", "Bearer 3dd89de9-d7f7-4405-81f2-c261ecb5edb8");
+            restRequest.AddHeader("accept", "application/json");
+            restRequest.AddParameter("undefined", "undefined=", ParameterType.RequestBody);
+            IRestResponse restResponse = client.Execute(restRequest);
+
+            StateofchargeRootObject apiResult = new JavaScriptSerializer().Deserialize<StateofchargeRootObject>(restResponse.Content);
+
+            return apiResult.stateofcharge.value.ToString();
         }
     }
 }
