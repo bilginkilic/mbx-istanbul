@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CARSDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="CARSDBEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cars" EntityType="CARSDBModel.Cars" />
+  </EntityContainer>
+  <EntityType Name="Cars">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="CarName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CarModel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RegisterId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Reputition" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ChargePercent" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Lat" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Long" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TargetLat" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TargetLong" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="IsReserved" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="IsPaired" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PairedCarId" Type="Int32" />
+  </EntityType>
+</Schema>

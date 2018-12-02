@@ -1,0 +1,12 @@
+C:\Project\CarShare\CarShare\bin\CarShare.dll.config
+C:\Project\CarShare\CarShare\bin\CarShare.dll
+C:\Project\CarShare\CarShare\bin\CarShare.pdb
+C:\Project\CarShare\CarShare\bin\EntityFramework.dll
+C:\Project\CarShare\CarShare\bin\EntityFramework.SqlServer.dll
+C:\Project\CarShare\CarShare\bin\EntityFramework.xml
+C:\Project\CarShare\CarShare\bin\EntityFramework.SqlServer.xml
+C:\Project\CarShare\CarShare\obj\Debug\CarShare.csproj.CoreCompileInputs.cache
+C:\Project\CarShare\CarShare\obj\Debug\CarShare.csproj.CopyComplete
+C:\Project\CarShare\CarShare\obj\Debug\CarShare.dll
+C:\Project\CarShare\CarShare\obj\Debug\CarShare.pdb
+C:\Project\CarShare\CarShare\obj\Debug\CarShare.csprojAssemblyReference.cache

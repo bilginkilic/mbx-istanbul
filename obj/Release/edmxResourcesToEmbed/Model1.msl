@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CARSDBModelStoreContainer" CdmEntityContainer="CARSDBEntities1">
+    <EntitySetMapping Name="Cars">
+      <EntityTypeMapping TypeName="CARSDBModel.Cars">
+        <MappingFragment StoreEntitySet="Cars">
+          <ScalarProperty Name="PairedCarId" ColumnName="PairedCarId" />
+          <ScalarProperty Name="IsPaired" ColumnName="IsPaired" />
+          <ScalarProperty Name="IsReserved" ColumnName="IsReserved" />
+          <ScalarProperty Name="TargetLong" ColumnName="TargetLong" />
+          <ScalarProperty Name="TargetLat" ColumnName="TargetLat" />
+          <ScalarProperty Name="Long" ColumnName="Long" />
+          <ScalarProperty Name="Lat" ColumnName="Lat" />
+          <ScalarProperty Name="ChargePercent" ColumnName="ChargePercent" />
+          <ScalarProperty Name="Reputition" ColumnName="Reputition" />
+          <ScalarProperty Name="RegisterId" ColumnName="RegisterId" />
+          <ScalarProperty Name="CarModel" ColumnName="CarModel" />
+          <ScalarProperty Name="CarName" ColumnName="CarName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
